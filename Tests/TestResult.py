@@ -12,7 +12,7 @@ Board2 = [[EMPTY, X, EMPTY],
           [EMPTY, EMPTY, O],
           [EMPTY, EMPTY, EMPTY]]
 
-if result(emptyBoard, (0, 1)) == Board1:
+if result(emptyBoard, (0, 1)) == Board1 and emptyBoard != Board1:
     print("works")
 else:
     print("check failed")

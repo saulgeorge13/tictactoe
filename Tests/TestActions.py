@@ -3,7 +3,7 @@ from tictactoe import EMPTY, actions, X, O
 emptyBoard = [[EMPTY, EMPTY, EMPTY],
               [EMPTY, EMPTY, EMPTY],
               [EMPTY, EMPTY, EMPTY]]
-action1 = [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
+action1 = {(0, 0), (1, 1), (1, 0), (0, 2), (2, 0), (1, 2), (2, 2), (2, 1), (0, 1)}
 if actions(emptyBoard) == action1:
     print("emptyBoard actions work")
 else:
@@ -12,7 +12,7 @@ else:
 Board1 = [[EMPTY, X, EMPTY],
           [EMPTY, EMPTY, EMPTY],
           [EMPTY, EMPTY, EMPTY]]
-action2 = [(0, 0), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]
+action2 = {(0, 0), (1, 1), (1, 0), (0, 2), (2, 0), (1, 2), (2, 2), (2, 1)}
 if actions(Board1) == action2:
     print("1move actions work")
 else:
@@ -21,7 +21,7 @@ else:
 Board2 = [[EMPTY, X, EMPTY],
           [EMPTY, EMPTY, O],
           [EMPTY, EMPTY, EMPTY]]
-action3 = [(0, 0), (0, 2), (1, 0), (1, 1), (2, 0), (2, 1), (2, 2)]
+action3 = {(0, 0), (1, 1), (1, 0), (0, 2), (2, 0), (2, 2), (2, 1)}
 if actions(Board2) == action3:
     print("2move actions work")
 else:
@@ -30,7 +30,7 @@ else:
 fullBoard = [[X, X, X],
              [X, X, O],
              [X, X, X]]
-action4 = []
+action4 = set()
 if actions(fullBoard) == action4:
     print("fullBoard actions work")
 else:
